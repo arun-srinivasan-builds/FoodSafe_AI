@@ -48,7 +48,7 @@ The demonstration includes:
 - Session-based conversational memory for follow-up questions
 - Knowledge-boundary handling for questions outside the application's food-safety scope
 
-▶️ **[Watch the FoodSafe AI Demo](https://github.com/arun-srinivasan-builds/FoodSafe_AI/tree/0b95a9c22869e2316cd1e6fabbc51755269247b5/assets/demo/foodsafe_ai_demo_FINAL.mp4)**
+▶️ **[Watch the FoodSafe AI Demo](https://github.com/arun-srinivasan-builds/FoodSafe_AI/blob/6d040afb2f50b6c5d6e3b853344ef433fc6da493/assets/demo/foodsafe_ai_demo.mp4)**
 
 **Demo duration:** ~1 minute 51 seconds
 
