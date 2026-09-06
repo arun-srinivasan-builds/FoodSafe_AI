@@ -22,11 +22,13 @@ Official food-safety guidance is available across FSSAI and FoSCoS resources, bu
 
 ### Home Page
 
-![FoodSafe AI Home Page](assets/screenshots/foodsafe_ai_home.png)
+![Alt text](https://github.com/arun-srinivasan-builds/FoodSafe_AI/blob/93b1358b6a9695aa66eec6ab32a14eeb80928c7b/assets/foodsafe_ai_home.png)
+
 
 ### Grounded Answer with Official Sources
 
-![FoodSafe AI Answer](assets/screenshots/foodsafe_ai_answer.png)
+![Alt text](https://github.com/arun-srinivasan-builds/FoodSafe_AI/blob/93b1358b6a9695aa66eec6ab32a14eeb80928c7b/assets/foodsafe_ai_answer.png)
+
 
 ---
 
