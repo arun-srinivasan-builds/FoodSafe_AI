@@ -145,15 +145,128 @@ Grounded Answer + Official Sources
 
 ## ▶️ Run the Application
 
-Ensure the required Python packages are installed and your OpenAI API key is configured in the local `.env` file.
+## ▶️ Run the Application
 
-From the project root, run:
+FoodSafe AI can be run locally using the processed FSSAI/FoSCoS knowledge base included in this repository.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/arun-srinivasan-builds/FoodSafe_AI.git
+cd FoodSafe_AI
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**macOS / Linux**
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure Your OpenAI API Key
+
+Create a file named `.env` in the project root:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+Replace `your_openai_api_key` with your own OpenAI API key.
+
+> **Security:** Never commit your API key to GitHub. The `.env` file is excluded from this repository through `.gitignore`.
+
+### 5. Build the FAISS Vector Store
+
+The processed FSSAI/FoSCoS knowledge base required by the application is already included in:
+
+```text
+data/fssai_documents.json
+```
+
+Build the local FAISS vector index:
+
+```bash
+python rag/build_vectorstore.py
+```
+
+This performs:
+
+**Load Documents → Split into Chunks → Create OpenAI Embeddings → Build FAISS Index**
+
+The generated index is stored under:
+
+```text
+vectorstore/faiss_index/
+```
+
+The `vectorstore/` directory is intentionally excluded from Git because it can be regenerated locally from the included source data.
+
+### 6. Launch FoodSafe AI
 
 ```bash
 streamlit run foodsafe_ai_app.py
 ```
 
-The FoodSafe AI application will open in your browser.
+Streamlit will start the application and provide a local browser URL.
+
+### Optional: Refresh the FSSAI/FoSCoS Knowledge Base
+
+The repository already contains the processed data needed to run the application, so **Playwright is not required for normal application startup**.
+
+If you want to re-scrape the official FSSAI/FoSCoS sources, first install the Playwright Chromium browser:
+
+```bash
+playwright install chromium
+```
+
+Then run the scraper:
+
+```bash
+python scraper/scrape_fssai.py
+```
+
+After refreshing the source data, rebuild the FAISS vector store before launching the application again:
+
+```bash
+python rag/build_vectorstore.py
+```
+
+### Quick Start Summary
+
+```text
+Clone Repository
+      ↓
+Create & Activate Virtual Environment
+      ↓
+pip install -r requirements.txt
+      ↓
+Create .env with your own OPENAI_API_KEY
+      ↓
+python rag/build_vectorstore.py
+      ↓
+streamlit run foodsafe_ai_app.py
+      ↓
+FoodSafe AI
+```
 
 > **Note:** `.env` and the locally generated FAISS vector store are excluded from the Git repository.
 
