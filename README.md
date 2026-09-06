@@ -34,8 +34,6 @@ Official food-safety guidance is available across FSSAI and FoSCoS resources, bu
 
 ## 🎬 Application Demo
 
-## 🎬 Application Demo
-
 The demo below shows FoodSafe AI working end-to-end — from a consumer food-safety question to a grounded response based on official FSSAI and FoSCoS information.
 
 The demonstration includes:
@@ -142,8 +140,6 @@ Grounded Answer + Official Sources
 ➡️ [Understand the LangChain & RAG Concepts](docs/07_langchain_rag_concepts.md)
 
 ---
-
-## ▶️ Run the Application
 
 ## ▶️ Run the Application
 
